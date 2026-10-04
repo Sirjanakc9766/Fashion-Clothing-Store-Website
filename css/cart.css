@@ -1,0 +1,145 @@
+/* ============================================
+   CART PAGE STYLES
+   ============================================ */
+
+.cart-page {
+  max-width: 1100px;
+  margin: 30px auto 60px;
+  padding: 0 5%;
+}
+
+.cart-page h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #777;
+}
+
+.cart-empty i {
+  font-size: 40px;
+  color: #ccc;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+table.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.cart-table th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+  padding: 10px 8px;
+  border-bottom: 2px solid #eee;
+}
+
+table.cart-table td {
+  padding: 16px 8px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cart-product img {
+  width: 64px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #f5f5f5;
+}
+
+.cart-product h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cart-product p {
+  font-size: 12px;
+  color: #888;
+}
+
+.qty-cell .quantity {
+  display: inline-flex;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #c8102e;
+  font-size: 15px;
+}
+
+.coupon-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.coupon-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+}
+
+.cart-summary {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.cart-summary h2 {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-row.total {
+  font-size: 17px;
+  font-weight: 700;
+  border-bottom: none;
+  padding-top: 16px;
+}
+
+.cart-summary .btn {
+  width: 100%;
+  margin-top: 18px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+}

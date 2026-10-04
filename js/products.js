@@ -1,0 +1,347 @@
+// products.js
+// Single source of truth for every product in the store.
+// Data + real photos taken from the FWDD assignment folder.
+
+const PRODUCTS = [
+  // ---------------- WOMEN ----------------
+  {
+    id: "women-bodycon-dress",
+    category: "Women",
+    name: "Bodycon Dress",
+    price: 1500,
+    image: "images/women-bodycon-dress.jpeg",
+    description: "Figure-hugging bodycon dress made with premium stretch fabric. Perfect for evening outings and parties.",
+    colors: ["Choose an option", "Brown", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Stretch Fabric", "Figure-Hugging Fit", "Soft & Comfortable", "Machine Washable"],
+    code: "114587"
+  },
+  {
+    id: "women-cordset",
+    category: "Women",
+    name: "Cordset",
+    price: 1350,
+    image: "images/women-cordset.jpeg",
+    description: "Matching co-ord set made with premium fabric. Perfect for casual and semi-formal wear.",
+    colors: ["Choose an option", "Brown", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Matching Two-Piece Set", "Soft & Comfortable", "Machine Washable"],
+    code: "10987"
+  },
+  {
+    id: "women-crop-shirt",
+    category: "Women",
+    name: "Crop Shirt",
+    price: 550,
+    image: "images/women-crop-shirt.jpeg",
+    description: "Trendy crop shirt made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Yellow", "Baby Pink"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Cropped Fit", "Soft & Comfortable", "Machine Washable"],
+    code: "10987"
+  },
+  {
+    id: "women-cute-top",
+    category: "Women",
+    name: "Cute Top",
+    price: 600,
+    image: "images/women-cute-top.jpeg",
+    description: "Comfortable everyday top made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Brown", "Black", "Baby Pink"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Relaxed Fit", "Soft & Comfortable", "Machine Washable"],
+    code: "10987"
+  },
+  {
+    id: "women-knit-sweater",
+    category: "Women",
+    name: "Knit Sweater",
+    price: 1200,
+    image: "images/women-knit-sweater.jpeg",
+    description: "Warm knit sweater made with premium fabric. Perfect for cool weather and layering.",
+    colors: ["Choose an option", "Brown", "Black", "Blood Red"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Knit Fabric", "Warm & Cozy", "Soft & Comfortable", "Machine Washable"],
+    code: "7856"
+  },
+  {
+    id: "women-formal-pant",
+    category: "Women",
+    name: "Formal Pant",
+    price: 900,
+    image: "images/women-formal-pant.jpeg",
+    description: "Tailored formal pant made with premium fabric. Perfect for office wear.",
+    colors: ["Choose an option", "White", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Soft & Comfortable", "Machine Washable"],
+    code: "35789"
+  },
+  {
+    id: "women-jeans",
+    category: "Women",
+    name: "Jeans",
+    price: 1000,
+    image: "images/women-jeans.jpeg",
+    description: "Classic denim jeans made with premium fabric. Perfect for everyday casual wear.",
+    colors: ["Choose an option", "Blue", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Denim", "Slim Fit", "Soft & Comfortable", "Machine Washable"],
+    code: "10987"
+  },
+  {
+    id: "women-polo-shirt",
+    category: "Women",
+    name: "Polo Shirt",
+    price: 600,
+    image: "images/women-polo-shirt.jpeg",
+    description: "Comfortable polo shirt made with premium fabric. Perfect for casual and sporty looks.",
+    colors: ["Choose an option", "Black and White"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Classic Collar", "Soft & Comfortable", "Machine Washable"],
+    code: "88767"
+  },
+  {
+    id: "women-tshirt-trouser-set",
+    category: "Women",
+    name: "T-shirt and Trouser Set",
+    price: 1500,
+    image: "images/women-tshirt-trouser-set.jpeg",
+    description: "Matching T-shirt and trouser set made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Brown", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Matching Two-Piece Set", "Soft & Comfortable", "Machine Washable"],
+    code: "02409"
+  },
+  {
+    id: "women-tshirt",
+    category: "Women",
+    name: "T-shirt",
+    price: 550,
+    image: "images/women-tshirt.jpeg",
+    description: "Everyday basic T-shirt made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "White", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Relaxed Fit", "Soft & Comfortable", "Machine Washable"],
+    code: "10987"
+  },
+  {
+    id: "women-vintage-tshirt",
+    category: "Women",
+    name: "Vintage T-shirt",
+    price: 699,
+    image: "images/women-vintage-tshirt.jpeg",
+    description: "Vintage-style graphic T-shirt made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Brown", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Vintage Print", "Soft & Comfortable", "Machine Washable"],
+    code: "10987"
+  },
+  {
+    id: "women-off-shoulder-top",
+    category: "Women",
+    name: "Off-Shoulder Top",
+    price: 599,
+    image: "images/women-off-shoulder-top.jpeg",
+    description: "Off-shoulder top made with premium fabric. Perfect for evening and casual wear.",
+    colors: ["Choose an option", "Brown", "Black"],
+    sizes: ["M", "L", "XL", "2XL"],
+    features: ["Premium Quality Fabric", "Off-Shoulder Design", "Soft & Comfortable", "Machine Washable"],
+    code: "10987"
+  },
+
+  // ---------------- MEN ----------------
+  {
+    id: "men-black-shirt-white-pant",
+    category: "Men",
+    name: "Black Shirt and White Pant",
+    price: 3000,
+    image: "images/men-black-shirt-white-pant.jpeg",
+    description: "Sharp black shirt and white pant set made with premium fabric. Perfect for formal occasions.",
+    colors: ["Choose an option", "White", "Black", "Brown"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-blue-white-formal-set",
+    category: "Men",
+    name: "Blue and White Formal Set",
+    price: 3000,
+    image: "images/men-blue-white-formal-set.jpeg",
+    description: "Blue and white formal set made with premium fabric. Perfect for formal occasions.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-blue-shirt-white-pant",
+    category: "Men",
+    name: "Blue Shirt and White Pant",
+    price: 3000,
+    image: "images/men-blue-shirt-white-pant.jpeg",
+    description: "Blue shirt and white pant set made with premium fabric. Perfect for formal occasions.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-blue-tshirt",
+    category: "Men",
+    name: "Blue T-shirt",
+    price: 1000,
+    image: "images/men-blue-tshirt.jpeg",
+    description: "Comfortable blue T-shirt made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Relaxed Fit", "Machine Washable", "Suitable for Daily Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-formal-attire",
+    category: "Men",
+    name: "Formal Attire",
+    price: 3000,
+    image: "images/men-formal-attire.jpeg",
+    description: "Complete formal attire made with premium fabric. Perfect for office and formal occasions.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-formal-set",
+    category: "Men",
+    name: "Formal Set",
+    price: 3000,
+    image: "images/men-formal-set.jpeg",
+    description: "Complete formal set made with premium fabric. Perfect for office and formal occasions.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-formall-attire-2",
+    category: "Men",
+    name: "Formal Attire II",
+    price: 3000,
+    image: "images/men-formall-attire-2.jpeg",
+    description: "Alternate formal attire set made with premium fabric. Perfect for office and formal occasions.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-set-dress",
+    category: "Men",
+    name: "Set Dress",
+    price: 3000,
+    image: "images/men-set-dress.jpeg",
+    description: "Coordinated set made with premium fabric. Perfect for special occasions.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-white-blue-formal-tshirt",
+    category: "Men",
+    name: "White and Blue Formal T-shirt",
+    price: 3000,
+    image: "images/men-white-blue-formal-tshirt.jpeg",
+    description: "White and blue formal T-shirt made with premium fabric. Perfect for smart-casual wear.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Smart-Casual Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-white-formal-tshirt",
+    category: "Men",
+    name: "White Formal T-shirt",
+    price: 1000,
+    image: "images/men-white-formal-tshirt.jpeg",
+    description: "White formal T-shirt made with premium fabric. Perfect for smart-casual wear.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Smart-Casual Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-white-polo-shirt",
+    category: "Men",
+    name: "White Polo Shirt",
+    price: 1000,
+    image: "images/men-white-polo-shirt.jpeg",
+    description: "Classic white polo shirt made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "White", "Black", "Blue"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Classic Collar", "Machine Washable", "Suitable for Daily Wear"],
+    code: "4658778"
+  },
+  {
+    id: "men-white-shirt",
+    category: "Men",
+    name: "White Shirt",
+    price: 1000,
+    image: "images/men-white-shirt.jpeg",
+    description: "Classic white shirt made with premium fabric. Perfect for office and formal wear.",
+    colors: ["Choose an option", "White", "Black"],
+    sizes: ["S", "M", "L", "XL"],
+    features: ["Premium Quality Fabric", "Tailored Fit", "Machine Washable", "Suitable for Formal Wear"],
+    code: "4658778"
+  },
+
+  // ---------------- KIDS ----------------
+  {
+    id: "kids1",
+    category: "Kids",
+    name: "Notched Collar Shirt",
+    price: 1998,
+    image: "images/kids1.jpg",
+    description: "Comfortable notched collar shirt made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Black", "Brown", "Maroon", "Navy Blue"],
+    sizes: ["Small", "Medium", "Large", "XL"],
+    features: ["Premium Quality Fabric", "Soft & Comfortable", "Machine Washable", "Suitable for Daily Wear"],
+    code: "FS-K001"
+  },
+  {
+    id: "kids2",
+    category: "Kids",
+    name: "Denim Pant",
+    price: 1978,
+    image: "images/kids2.jpg",
+    description: "Comfortable denim pant made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Black", "Brown", "Grey", "Navy Blue"],
+    sizes: ["Small", "Medium", "Large", "XL"],
+    features: ["Premium Quality Fabric", "Soft & Comfortable", "Machine Washable", "Suitable for Daily Wear"],
+    code: "FS-K002"
+  },
+  {
+    id: "kids3",
+    category: "Kids",
+    name: "Windcheater",
+    price: 2498,
+    image: "images/kids3.jpg",
+    description: "Comfortable windcheater made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Black", "Brown", "Grey", "Navy Blue"],
+    sizes: ["Small", "Medium", "Large", "XL"],
+    features: ["Premium Quality Fabric", "Soft & Comfortable", "Machine Washable", "Suitable for Daily Wear"],
+    code: "FS-K003"
+  },
+  {
+    id: "kids4",
+    category: "Kids",
+    name: "Printed T-Shirt",
+    price: 1998,
+    image: "images/kids4.jpg",
+    description: "Comfortable printed T-shirt made with premium fabric. Perfect for casual wear.",
+    colors: ["Choose an option", "Black", "Brown", "Grey", "Navy Blue"],
+    sizes: ["Small", "Medium", "Large", "XL"],
+    features: ["Premium Quality Fabric", "Soft & Comfortable", "Machine Washable", "Suitable for Daily Wear"],
+    code: "FS-K004"
+  }
+];

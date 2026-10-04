@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product | Fashion Station</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-bar">
+    <a href="homepage.html" class="logo"><img src="images/logo.jpeg" alt="Fashion Station logo"></a>
+
+    <nav class="nav-bar">
+      <a href="homepage.html">Online</a>
+      <a href="homepage.html#women-grid">Women</a>
+      <a href="homepage.html#men-grid">Men</a>
+      <a href="homepage.html#kids-grid">Kids</a>
+      <a href="store.html">Find a store</a>
+    </nav>
+
+    <div class="header-icons">
+      <div class="search-box" id="search-box">
+        <input type="text" id="search-input" placeholder="Search products..."
+          onkeydown="if(event.key==='Enter') submitSearch(event)">
+      </div>
+      <a href="#" onclick="toggleSearch(); return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="breadcrumb">
+  <a href="homepage.html">Home</a> /
+  <a href="#" id="crumb-category">Category</a> /
+  <span id="crumb-name">Product</span>
+</div>
+
+<div class="product-container">
+
+  <div class="left">
+    <div class="thumb">
+      <img id="p-image" src="" alt="">
+    </div>
+  </div>
+
+  <div class="right">
+    <h1 id="p-name"></h1>
+    <p class="price" id="p-price"></p>
+    <p class="stock">&#10004; In Stock</p>
+    <p class="desc" id="p-desc"></p>
+
+    <label>Choose Color</label>
+    <select id="p-color"></select>
+
+    <label>Choose Size</label>
+    <select id="p-size"></select>
+
+    <div class="quantity">
+      <button type="button" id="qty-minus">-</button>
+      <input type="number" id="p-qty" value="1" min="1">
+      <button type="button" id="qty-plus">+</button>
+    </div>
+
+    <div class="action-row">
+      <button class="btn btn-dark" id="add-to-cart-btn">Add to Cart</button>
+      <button class="btn btn-outline" id="wishlist-btn">
+        <i class="fa-regular fa-heart"></i> Add to Wishlist
+      </button>
+    </div>
+
+    <hr>
+
+    <h3>Description</h3>
+    <ul id="p-features"></ul>
+
+    <hr>
+
+    <div class="meta">
+      <p><b>Product Code:</b> <span id="p-code"></span></p>
+      <p><b>Category:</b> <span id="p-category"></span></p>
+    </div>
+
+    <div class="share">
+      <b>Share:</b>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="policies.html">Our Policies</a>
+    <a href="info.html">Info</a>
+  </div>
+  <div class="footer-bottom">Copyright &copy; 2026 Fashion Station | The Clothing Store. All rights reserved.</div>
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart-store.js"></script>
+<script src="js/product.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

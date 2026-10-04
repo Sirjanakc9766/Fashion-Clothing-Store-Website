@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fashion Station | The Clothing Store</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-bar">
+    <a href="homepage.html" class="logo"><img src="images/logo.jpeg" alt="Fashion Station logo"></a>
+
+    <nav class="nav-bar">
+      <a href="homepage.html" class="active">Online</a>
+      <a href="#women-grid">Women</a>
+      <a href="#men-grid">Men</a>
+      <a href="#kids-grid">Kids</a>
+      <a href="store.html">Find a store</a>
+    </nav>
+
+    <div class="header-icons">
+      <div class="search-box" id="search-box">
+        <input type="text" id="search-input" placeholder="Search products..."
+          onkeydown="if(event.key==='Enter') submitSearch(event)">
+      </div>
+      <a href="#" onclick="toggleSearch(); return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </div>
+  <div class="shop-online-bar">Shop Online</div>
+</header>
+
+<div class="hero-slider" id="hero-slider">
+  <div class="slide active" style="background-image:url('images/home.jpg')">
+    <div class="slide-content">
+      <h2>New Season Arrivals</h2>
+      <p>Fresh styles for Women, Men &amp; Kids, all in one place.</p>
+      <a href="#women-grid" class="btn btn-dark">Shop Now</a>
+    </div>
+  </div>
+  <div class="slide" style="background-image:url('images/women-bodycon-dress.jpeg')">
+    <div class="slide-content">
+      <h2>Women's Collection</h2>
+      <p>Dresses, tops, co-ord sets and everyday essentials.</p>
+      <a href="#women-grid" class="btn btn-dark">Shop Women</a>
+    </div>
+  </div>
+  <div class="slide" style="background-image:url('images/men-formal-attire.jpeg')">
+    <div class="slide-content">
+      <h2>Men's Formal Edit</h2>
+      <p>Sharp, tailored looks for every occasion.</p>
+      <a href="#men-grid" class="btn btn-dark">Shop Men</a>
+    </div>
+  </div>
+
+  <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#10094;</button>
+  <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">&#10095;</button>
+  <div class="slider-dots" id="slider-dots"></div>
+</div>
+
+<div class="toolbar">
+  <span class="result-count">Showing 1-28 of 28</span>
+  <select id="sort">
+    <option>Sort by Latest</option>
+    <option>Sort by most Popularity</option>
+    <option>Sort by price: low to high</option>
+    <option>Sort by price: high to low</option>
+  </select>
+</div>
+
+<section class="arrivals">
+
+  <h2 id="women-grid">Women New Arrivals</h2>
+  <div class="products">
+    <div class="product-card" data-name="Bodycon Dress" data-price="1500">
+      <div class="thumb"><img src="images/women-bodycon-dress.jpeg" alt="Bodycon Dress"></div>
+      <div class="info"><h3>Bodycon Dress</h3><p class="price">Rs. 1,500</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-bodycon-dress'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Cordset" data-price="1350">
+      <div class="thumb"><img src="images/women-cordset.jpeg" alt="Cordset"></div>
+      <div class="info"><h3>Cordset</h3><p class="price">Rs. 1,350</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-cordset'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Crop Shirt" data-price="550">
+      <div class="thumb"><img src="images/women-crop-shirt.jpeg" alt="Crop Shirt"></div>
+      <div class="info"><h3>Crop Shirt</h3><p class="price">Rs. 550</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-crop-shirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Cute Top" data-price="600">
+      <div class="thumb"><img src="images/women-cute-top.jpeg" alt="Cute Top"></div>
+      <div class="info"><h3>Cute Top</h3><p class="price">Rs. 600</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-cute-top'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Knit Sweater" data-price="1200">
+      <div class="thumb"><img src="images/women-knit-sweater.jpeg" alt="Knit Sweater"></div>
+      <div class="info"><h3>Knit Sweater</h3><p class="price">Rs. 1,200</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-knit-sweater'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Formal Pant" data-price="900">
+      <div class="thumb"><img src="images/women-formal-pant.jpeg" alt="Formal Pant"></div>
+      <div class="info"><h3>Formal Pant</h3><p class="price">Rs. 900</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-formal-pant'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Jeans" data-price="1000">
+      <div class="thumb"><img src="images/women-jeans.jpeg" alt="Jeans"></div>
+      <div class="info"><h3>Jeans</h3><p class="price">Rs. 1,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-jeans'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Polo Shirt" data-price="600">
+      <div class="thumb"><img src="images/women-polo-shirt.jpeg" alt="Polo Shirt"></div>
+      <div class="info"><h3>Polo Shirt</h3><p class="price">Rs. 600</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-polo-shirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="T-shirt and Trouser Set" data-price="1500">
+      <div class="thumb"><img src="images/women-tshirt-trouser-set.jpeg" alt="T-shirt and Trouser Set"></div>
+      <div class="info"><h3>T-shirt and Trouser Set</h3><p class="price">Rs. 1,500</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-tshirt-trouser-set'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="T-shirt" data-price="550">
+      <div class="thumb"><img src="images/women-tshirt.jpeg" alt="T-shirt"></div>
+      <div class="info"><h3>T-shirt</h3><p class="price">Rs. 550</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-tshirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Vintage T-shirt" data-price="699">
+      <div class="thumb"><img src="images/women-vintage-tshirt.jpeg" alt="Vintage T-shirt"></div>
+      <div class="info"><h3>Vintage T-shirt</h3><p class="price">Rs. 699</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-vintage-tshirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Off-Shoulder Top" data-price="599">
+      <div class="thumb"><img src="images/women-off-shoulder-top.jpeg" alt="Off-Shoulder Top"></div>
+      <div class="info"><h3>Off-Shoulder Top</h3><p class="price">Rs. 599</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=women-off-shoulder-top'">View Product</button></div>
+    </div>
+  </div>
+
+  <h2 id="men-grid">Men New Arrivals</h2>
+  <div class="products">
+    <div class="product-card" data-name="Black Shirt and White Pant" data-price="3000">
+      <div class="thumb"><img src="images/men-black-shirt-white-pant.jpeg" alt="Black Shirt and White Pant"></div>
+      <div class="info"><h3>Black Shirt and White Pant</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-black-shirt-white-pant'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Blue and White Formal Set" data-price="3000">
+      <div class="thumb"><img src="images/men-blue-white-formal-set.jpeg" alt="Blue and White Formal Set"></div>
+      <div class="info"><h3>Blue and White Formal Set</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-blue-white-formal-set'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Blue Shirt and White Pant" data-price="3000">
+      <div class="thumb"><img src="images/men-blue-shirt-white-pant.jpeg" alt="Blue Shirt and White Pant"></div>
+      <div class="info"><h3>Blue Shirt and White Pant</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-blue-shirt-white-pant'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Blue T-shirt" data-price="1000">
+      <div class="thumb"><img src="images/men-blue-tshirt.jpeg" alt="Blue T-shirt"></div>
+      <div class="info"><h3>Blue T-shirt</h3><p class="price">Rs. 1,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-blue-tshirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Formal Attire" data-price="3000">
+      <div class="thumb"><img src="images/men-formal-attire.jpeg" alt="Formal Attire"></div>
+      <div class="info"><h3>Formal Attire</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-formal-attire'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Formal Set" data-price="3000">
+      <div class="thumb"><img src="images/men-formal-set.jpeg" alt="Formal Set"></div>
+      <div class="info"><h3>Formal Set</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-formal-set'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Formal Attire II" data-price="3000">
+      <div class="thumb"><img src="images/men-formall-attire-2.jpeg" alt="Formal Attire II"></div>
+      <div class="info"><h3>Formal Attire II</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-formall-attire-2'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Set Dress" data-price="3000">
+      <div class="thumb"><img src="images/men-set-dress.jpeg" alt="Set Dress"></div>
+      <div class="info"><h3>Set Dress</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-set-dress'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="White and Blue Formal T-shirt" data-price="3000">
+      <div class="thumb"><img src="images/men-white-blue-formal-tshirt.jpeg" alt="White and Blue Formal T-shirt"></div>
+      <div class="info"><h3>White and Blue Formal T-shirt</h3><p class="price">Rs. 3,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-white-blue-formal-tshirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="White Formal T-shirt" data-price="1000">
+      <div class="thumb"><img src="images/men-white-formal-tshirt.jpeg" alt="White Formal T-shirt"></div>
+      <div class="info"><h3>White Formal T-shirt</h3><p class="price">Rs. 1,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-white-formal-tshirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="White Polo Shirt" data-price="1000">
+      <div class="thumb"><img src="images/men-white-polo-shirt.jpeg" alt="White Polo Shirt"></div>
+      <div class="info"><h3>White Polo Shirt</h3><p class="price">Rs. 1,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-white-polo-shirt'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="White Shirt" data-price="1000">
+      <div class="thumb"><img src="images/men-white-shirt.jpeg" alt="White Shirt"></div>
+      <div class="info"><h3>White Shirt</h3><p class="price">Rs. 1,000</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=men-white-shirt'">View Product</button></div>
+    </div>
+  </div>
+
+  <h2 id="kids-grid">Kids New Arrivals</h2>
+  <div class="products">
+    <div class="product-card" data-name="Notched Collar Shirt" data-price="1998">
+      <div class="thumb"><img src="images/kids1.jpg" alt="Notched Collar Shirt"></div>
+      <div class="info"><h3>Notched Collar Shirt</h3><p class="price">Rs. 1,998</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=kids1'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Denim Pant" data-price="1978">
+      <div class="thumb"><img src="images/kids2.jpg" alt="Denim Pant"></div>
+      <div class="info"><h3>Denim Pant</h3><p class="price">Rs. 1,978</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=kids2'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Windcheater" data-price="2498">
+      <div class="thumb"><img src="images/kids3.jpg" alt="Windcheater"></div>
+      <div class="info"><h3>Windcheater</h3><p class="price">Rs. 2,498</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=kids3'">View Product</button></div>
+    </div>
+    <div class="product-card" data-name="Printed T-Shirt" data-price="1998">
+      <div class="thumb"><img src="images/kids4.jpg" alt="Printed T-Shirt"></div>
+      <div class="info"><h3>Printed T-Shirt</h3><p class="price">Rs. 1,998</p>
+        <button class="btn btn-dark" onclick="window.location.href='product.html?id=kids4'">View Product</button></div>
+    </div>
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="policies.html">Our Policies</a>
+    <a href="info.html">Info</a>
+  </div>
+  <div class="footer-bottom">Copyright &copy; 2026 Fashion Station | The Clothing Store. All rights reserved.</div>
+</footer>
+
+<script src="js/cart-store.js"></script>
+<script src="js/search.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/sort.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart | Fashion Station</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-bar">
+    <a href="homepage.html" class="logo"><img src="images/logo.jpeg" alt="Fashion Station logo"></a>
+
+    <nav class="nav-bar">
+      <a href="homepage.html">Online</a>
+      <a href="homepage.html#women-grid">Women</a>
+      <a href="homepage.html#men-grid">Men</a>
+      <a href="homepage.html#kids-grid">Kids</a>
+      <a href="store.html">Find a store</a>
+    </nav>
+
+    <div class="header-icons">
+      <div class="search-box" id="search-box">
+        <input type="text" id="search-input" placeholder="Search products..."
+          onkeydown="if(event.key==='Enter') submitSearch(event)">
+      </div>
+      <a href="#" onclick="toggleSearch(); return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="cart-page">
+  <h1>Your Cart</h1>
+
+  <div id="cart-empty" class="cart-empty" style="display:none;">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <p>Your cart is empty.</p>
+    <a href="homepage.html" class="btn btn-dark" style="margin-top:16px; display:inline-block;">Continue Shopping</a>
+  </div>
+
+  <div class="cart-layout" id="cart-layout">
+    <div class="cart-table-wrap">
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body"></tbody>
+      </table>
+
+      <div class="coupon-row">
+        <input type="text" id="coupon-input" placeholder="Try SAVE10 or WELCOME5">
+        <button class="btn btn-outline" id="apply-coupon-btn">Apply Coupon</button>
+      </div>
+      <p id="coupon-message" style="font-size:13px; margin-top:8px;"></p>
+    </div>
+
+    <div class="cart-summary">
+      <h2>Cart Totals</h2>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">Rs. 0</span>
+      </div>
+      <div class="summary-row" id="discount-row" style="display:none;">
+        <span>Discount</span>
+        <span id="discount">Rs. 0</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping</span>
+        <span>Free</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span id="total">Rs. 0</span>
+      </div>
+      <a href="checkout.html" class="btn btn-dark">Proceed to Checkout</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="policies.html">Our Policies</a>
+    <a href="info.html">Info</a>
+  </div>
+  <div class="footer-bottom">Copyright &copy; 2026 Fashion Station | The Clothing Store. All rights reserved.</div>
+</footer>
+
+<script src="js/cart-store.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

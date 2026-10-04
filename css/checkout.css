@@ -1,0 +1,163 @@
+/* ============================================
+   CHECKOUT PAGE STYLES
+   ============================================ */
+
+.checkout-container {
+  max-width: 1200px;
+  margin: 30px auto 60px;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.billing,
+.order-summary {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 30px;
+}
+
+.billing h2,
+.order-summary h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.row {
+  display: flex;
+  gap: 18px;
+}
+
+.input-box {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.input-box label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+  outline: none;
+  border-color: #c8102e;
+}
+
+textarea {
+  resize: none;
+}
+
+.order-summary {
+  position: sticky;
+  top: 90px;
+}
+
+.order-summary table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-summary th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #888;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-summary td {
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-row.total {
+  font-size: 17px;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+.payment {
+  margin-top: 20px;
+}
+
+.payment h3 {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.payment label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.payment input {
+  margin-right: 8px;
+}
+
+.place-order {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.place-order:hover {
+  background: #c8102e;
+}
+
+@media (max-width: 900px) {
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+  .order-summary {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}

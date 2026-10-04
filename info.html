@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Info | Fashion Station</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-bar">
+    <a href="homepage.html" class="logo"><img src="images/logo.jpeg" alt="Fashion Station logo"></a>
+
+    <nav class="nav-bar">
+      <a href="homepage.html">Online</a>
+      <a href="homepage.html#women-grid">Women</a>
+      <a href="homepage.html#men-grid">Men</a>
+      <a href="homepage.html#kids-grid">Kids</a>
+      <a href="store.html">Find a store</a>
+    </nav>
+
+    <div class="header-icons">
+      <div class="search-box" id="search-box">
+        <input type="text" id="search-input" placeholder="Search products..."
+          onkeydown="if(event.key==='Enter') submitSearch(event)">
+      </div>
+      <a href="#" onclick="toggleSearch(); return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <div class="page-head">
+    <h1>Info</h1>
+    <p class="lead">Customer service, contact details, and answers to common questions.</p>
+  </div>
+
+  <section>
+    <div class="info-grid">
+      <div class="info-card">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Customer Care</h3>
+        <p>Call us at <a href="tel:+9771234567">+977 1 234567</a><br>Sun–Fri, 10 AM – 6 PM</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email Us</h3>
+        <p>For order queries or feedback, write to <a href="mailto:support@fashionstation.com">support@fashionstation.com</a></p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-truck"></i>
+        <h3>Order Tracking</h3>
+        <p>Once shipped, you'll receive a tracking link by email or SMS to follow your order's progress.</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-solid fa-store"></i>
+        <h3>Visit a Store</h3>
+        <p>Prefer shopping in person? <a href="store.html">Find your nearest store</a> and check it out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <li>How long does delivery take? Typically 3–7 business days depending on your location.</li>
+      <li>Can I change my order after placing it? Contact customer care within a few hours of ordering and we'll do our best to help.</li>
+      <li>Do you offer size exchanges? Yes, see our Our Policies page for full details.</li>
+      <li>Is cash on delivery available? Yes, available on most locations across Nepal.</li>
+    </ul>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="policies.html">Our Policies</a>
+    <a href="info.html">Info</a>
+  </div>
+  <div class="footer-bottom">Copyright &copy; 2026 Fashion Station | The Clothing Store. All rights reserved.</div>
+</footer>
+
+<script src="js/cart-store.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

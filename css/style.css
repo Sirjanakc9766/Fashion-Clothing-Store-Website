@@ -1,0 +1,234 @@
+/* ============================================
+   GLOBAL STYLES — shared across every page
+   Reference: ufonepal.com layout & tone
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 5%;
+}
+
+.logo img {
+  height: 42px;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-bar a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #c8102e;
+  transition: width 0.25s ease;
+}
+
+.nav-bar a:hover::after,
+.nav-bar a.active::after {
+  width: 100%;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icons a {
+  font-size: 18px;
+  color: #222;
+  position: relative;
+}
+
+.header-icons .cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #c8102e;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search-box.active {
+  width: 200px;
+  opacity: 1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #c8102e;
+}
+
+.shop-online-bar {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #f0f0f0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-dark {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #c8102e;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid #1a1a1a;
+  color: #1a1a1a;
+}
+
+.btn-outline:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  background: #111;
+  color: #ddd;
+  margin-top: 60px;
+  padding: 40px 5% 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-links a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.footer-links a:hover {
+  color: #c8102e;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 12px;
+  color: #888;
+  padding-top: 18px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 850px) {
+  .top-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nav-bar {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+}

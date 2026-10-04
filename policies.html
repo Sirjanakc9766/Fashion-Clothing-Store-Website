@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Policies | Fashion Station</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="top-bar">
+    <a href="homepage.html" class="logo"><img src="images/logo.jpeg" alt="Fashion Station logo"></a>
+
+    <nav class="nav-bar">
+      <a href="homepage.html">Online</a>
+      <a href="homepage.html#women-grid">Women</a>
+      <a href="homepage.html#men-grid">Men</a>
+      <a href="homepage.html#kids-grid">Kids</a>
+      <a href="store.html">Find a store</a>
+    </nav>
+
+    <div class="header-icons">
+      <div class="search-box" id="search-box">
+        <input type="text" id="search-input" placeholder="Search products..."
+          onkeydown="if(event.key==='Enter') submitSearch(event)">
+      </div>
+      <a href="#" onclick="toggleSearch(); return false;"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count" id="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="content-page">
+  <div class="page-head">
+    <h1>Our Policies</h1>
+    <p class="lead">Everything you need to know about shopping with us.</p>
+  </div>
+
+  <section>
+    <h2>Shipping Policy</h2>
+    <p>Orders are processed within 1–2 business days and delivered across Nepal. Delivery times vary by location, and a tracking update is shared once your order is on its way.</p>
+  </section>
+
+  <section>
+    <h2>Returns &amp; Exchanges</h2>
+    <ul>
+      <li>Items can be returned or exchanged within 7 days of delivery</li>
+      <li>Products must be unused, unwashed, and in their original packaging with tags attached</li>
+      <li>Sale items are eligible for exchange only, not refund</li>
+      <li>Refunds are issued to the original payment method after inspection</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Payment Policy</h2>
+    <p>We accept cash on delivery as well as major online payment methods at checkout. All prices listed are in Nepalese Rupees (Rs.) and are inclusive of applicable taxes.</p>
+  </section>
+
+  <section>
+    <h2>Privacy Policy</h2>
+    <p>Your personal information is used only to process orders and improve your shopping experience. We do not sell or share your data with third parties beyond what's required to fulfill your order.</p>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <a href="policies.html">Our Policies</a>
+    <a href="info.html">Info</a>
+  </div>
+  <div class="footer-bottom">Copyright &copy; 2026 Fashion Station | The Clothing Store. All rights reserved.</div>
+</footer>
+
+<script src="js/cart-store.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>
