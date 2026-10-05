@@ -20,8 +20,7 @@ A responsive clothing store website built for the FWDD course assignment. Users 
 1. Clone or download this repository: https://github.com/Sirjanakc9766/Fashion-Clothing-Store-Website.git
 
 ## Screenshots
-![Home page screenshot]
-<img width="808" height="1042" alt="image" src="https://github.com/user-attachments/assets/d0f9411e-965b-4780-a199-639088fb913c" />
+<img width="808" height="1042" alt="Home page Screenshot" src="https://github.com/user-attachments/assets/d0f9411e-965b-4780-a199-639088fb913c" />
 
 ## Author
 **Sirjana K C**
